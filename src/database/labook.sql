@@ -4,7 +4,7 @@ CREATE TABLE users (
     name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
-    role TEXT DEFAULT "NORMAL" NOT NULL,
+    role TEXT NOT NULL,
     created_at TEXT DEFAULT (DATETIME()) NOT NULL
 );
 

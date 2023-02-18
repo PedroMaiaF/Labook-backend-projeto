@@ -1,20 +1,21 @@
 import { PostModel } from '../types'
 
-export interface GetPostInputDTO {
+export interface GetPostsInputDTO {
     token: string | undefined
+
 }
 
-export type GetPostOutputDTO = PostModel[]
+export type GetPostsOutputDTO = PostModel[]
 
 export interface CreatePostInputDTO {
     token: string | undefined,
-    name: unknown
+    content: string
 }
 
 export interface EditPostInputDTO {
     idToEdit: string,
     token: string | undefined,
-    name: unknown
+    content: string
 }
 
 export interface DeletePostInputDTO {
