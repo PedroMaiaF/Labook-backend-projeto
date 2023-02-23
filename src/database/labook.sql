@@ -16,6 +16,9 @@ VALUES
 
 SELECT * FROM users;
 
+DELETE FROM users
+WHERE name = "João Paulo";
+
 DROP TABLE users;
 
 CREATE TABLE posts (
@@ -73,3 +76,21 @@ SELECT * FROM posts;
 SELECT * FROM likes_dislikes;
 
 DROP TABLE likes_dislikes;
+
+    SELECT
+    posts.id,
+    posts.creator_id,
+    posts.content,
+    posts.likes,
+    posts.dislikes,
+    posts.created_at,
+    posts.updated_at,
+    users.name AS creator_name
+    FROM posts
+    JOIN users
+    ON posts.creator_id = users.id;
+
+    SELECT * FROM posts;
+
+    DELETE FROM posts
+    WHERE content = "Front e Back se complementam!";

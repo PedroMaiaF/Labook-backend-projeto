@@ -12,7 +12,7 @@ export class PostDatabase extends BaseDatabase {
             .select(
                 "posts.id",
                 "posts.creator_id",
-                "posts.name",
+                "posts.content",
                 "posts.likes",
                 "posts.dislikes",
                 "posts.created_at",
@@ -62,7 +62,7 @@ export class PostDatabase extends BaseDatabase {
             .select(
                 "posts.id",
                 "posts.creator_id",
-                "posts.name",
+                "posts.content",
                 "posts.likes",
                 "posts.dislikes",
                 "posts.created_at",
