@@ -125,7 +125,7 @@ export class PostBusiness {
         const creatorId = payload.id
 
         if (postDB.creator_id !== creatorId) {
-            throw new BadRequestError("somente quem criou a post pode editá-la")
+            throw new BadRequestError("somente quem criou o post pode editá-lo")
         }
 
         const creatorName = payload.name
@@ -176,7 +176,7 @@ export class PostBusiness {
             payload.role !== USER_ROLES.ADMIN
             && postDB.creator_id !== creatorId
         ) {
-            throw new BadRequestError("somente quem criou a post pode deletá-la")
+            throw new BadRequestError("somente quem criou a post pode excluí-lo")
         }
 
         await this.postDatabase.delete(idToDelete)
